@@ -1,11 +1,6 @@
-// const { optional } = require("joi");
 const db = require("./contacts");
-// const yargs = require("yargs");
-// const { hideBin } = require("yargs/helpers");
-// const consoleTable = require("console.table");
+
 const { Command } = require("commander");
-// const { options } = require("yargs");
-// const db = new Contacts();
 
 const invokeAction = async ({ action, id, name, email, phone }) => {
   switch (action) {
@@ -47,22 +42,4 @@ program.parse(process.argv);
 const argv = program.opts();
 console.log(argv);
 
-// const actionIndex = process.argv.indexOf("--action");
-// if (actionIndex !== -1) {
-//   const action = process.argv[actionIndex + 1];
-//   invokeAction({ action });
-// }
-
-// const arr = hideBin(process.argv);
-// const { argv } = yargs(arr);
 invokeAction(argv);
-
-// invokeAction({ action: "read" });
-// invokeAction({ action: "getById", id: "rsKkOQUi80UsgVPCcLZZW" });
-// invokeAction({
-//   action: "updateById",
-//   id: "YoqAXDrg4I2TXydIz9y6y",
-//   email: "Don@scerereerererererererererer.net",
-//   phone: "(777) 777-7777",
-// });
-// invokeAction({ action: "deleteById", id: "rbt_eS5K1Eiua5KSOiWT_" });
